@@ -1,0 +1,13 @@
+name: LongCovidStudyathonW1Incidence
+title: LongCovidStudyathonW1Incidence
+username:
+account: dpa-pde-oxford
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8877483
+bundleId: 7101453
+url: https://dpa-pde-oxford.shinyapps.io/LongCovidStudyathonW1Incidence/
+when: 1681765946.24105
+lastSyncTime: 1681765946.24106
+asMultiple: FALSE
+asStatic: FALSE
