@@ -1,0 +1,613 @@
+table_name,cohort_definition_id,cohort_name
+slcp_basecohorts,1,Infection
+slcp_basecohorts,2,Reinfection
+slcp_basecohorts,3,Test negative
+slcp_basecohorts,4,Influenza
+slcp_lccohorts,1,Abdominal_pain
+slcp_lccohorts,2,Allergy
+slcp_lccohorts,3,Altered_smell_taste
+slcp_lccohorts,4,Anxiety
+slcp_lccohorts,5,Blurred_vision
+slcp_lccohorts,6,Chest pain or angina
+slcp_lccohorts,7,Cognitive_dysfunction_brain_fog
+slcp_lccohorts,8,Cough
+slcp_lccohorts,9,Depression wo recurrence
+slcp_lccohorts,10,Dizziness
+slcp_lccohorts,11,Dyspnea
+slcp_lccohorts,12,Fatigue_malaise
+slcp_lccohorts,13,Gastrointestinal_issues
+slcp_lccohorts,14,Headache
+slcp_lccohorts,15,Intermittent_fever
+slcp_lccohorts,16,Joint_pain
+slcp_lccohorts,17,Memory_issues
+slcp_lccohorts,18,Menstrual_problems
+slcp_lccohorts,19,Muscle_spasms_and_pain
+slcp_lccohorts,20,Neuralgia
+slcp_lccohorts,21,Pins_and_needles_sensation
+slcp_lccohorts,22,Postexertional_fatigue
+slcp_lccohorts,23,Sleep_disorder
+slcp_lccohorts,24,Tachycardia
+slcp_lccohorts,25,Tinnitus_hearing_problems
+slcp_lccohorts,26,Any LC symptom
+slcp_lccohorts,27,LC code
+slcp_pasccohorts,1,VenousThrombosembolism
+slcp_pasccohorts,2,DeepVeinThrombosis
+slcp_pasccohorts,3,PulmonaryEmbolism
+slcp_pasccohorts,4,HaemorrhagicStroke
+slcp_pasccohorts,5,IschemicStroke
+slcp_pasccohorts,6,TransientIschemicAttack
+slcp_pasccohorts,7,MyocardialInfarction
+slcp_pasccohorts,8,Myocarditis_Pericarditis
+slcp_pasccohorts,9,VentricularArrhythmia_CardiacArrest
+slcp_pasccohorts,10,HeartFailure
+slcp_pasccohorts,11,Any PASC event
+slcp_mccohorts,1,DiabetesType1
+slcp_mccohorts,2,DiabetesType2
+slcp_mccohorts,3,Dementia
+slcp_mccohorts,4,Dysauthonomia_POTS
+slcp_mccohorts,5,InflammatoryBowelDisease
+slcp_mccohorts,6,LiverInjuryFailureNonAlcohol
+slcp_mccohorts,7,Lupus
+slcp_mccohorts,8,MyocarditisPericarditis
+slcp_mccohorts,9,RenalFailure
+slcp_mccohorts,10,RheumatoideArthritis
+slcp_mccohorts,11,MalignantBreastCancer
+slcp_mccohorts,12,MalignantColorectalCancer
+slcp_mccohorts,13,MalignantHeadNeckCancer
+slcp_mccohorts,14,MalignantLiverBileDuctCancer
+slcp_mccohorts,15,MalignantLiverCancer
+slcp_mccohorts,16,MalignantLungCancer
+slcp_mccohorts,17,MalignantPancreaticCancer
+slcp_mccohorts,18,MalignantProstateCancer
+slcp_mccohorts,19,MalignantStomachCancer
+slcp_mccohorts,20,MISC
+slcp_mccohorts,21,JuvenileArthritis
+slcp_mccohorts,22,ME_CFS_narrow
+slcp_mccohorts,23,ME_CFS_broad
+slcp_mccohorts,24,Dysauthonomia_wide
+slcp_vacccohorts,1,Vaccinated
+slcp_vacccohorts,2,Not vaccinated
+slcp_vacccohorts,3,First dose
+slcp_vacccohorts,4,Second dose
+slcp_vacccohorts,5,Third dose
+slcp_overlapccohorts,1,LC any + inf
+slcp_overlapccohorts,2,LC any + reinf
+slcp_overlapccohorts,3,LC any + neg
+slcp_overlapccohorts,4,LC any + flu
+slcp_overlapccohorts,5,LC code + inf
+slcp_overlapccohorts,6,LC code + reinf
+slcp_overlapccohorts,7,LC code + neg
+slcp_overlapccohorts,8,LC code + flu
+slcp_overlapccohorts,9,PASC any + inf
+slcp_overlapccohorts,10,PASC any + reinf
+slcp_overlapccohorts,11,PASC any + neg
+slcp_overlapccohorts,12,PASC any + flu
+slcp_overlapccohorts,133,Inf + LC any + vacc
+slcp_overlapccohorts,134,Inf + LC any + not vacc
+slcp_overlapccohorts,135,Reinf + LC any + vacc
+slcp_overlapccohorts,136,Reinf + LC any + not vacc
+slcp_overlapccohorts,137,Neg + LC any + vacc
+slcp_overlapccohorts,138,Neg + LC any + not vacc
+slcp_overlapccohorts,139,Flu + LC any + vacc
+slcp_overlapccohorts,140,Flu + LC any + not vacc
+slcp_overlapccohorts,141,Inf + LC code + vacc
+slcp_overlapccohorts,142,Inf + LC code + not vacc
+slcp_overlapccohorts,143,Reinf + LC code + vacc
+slcp_overlapccohorts,144,Reinf + LC code + not vacc
+slcp_overlapccohorts,145,Neg + LC code + vacc
+slcp_overlapccohorts,146,Neg + LC code + not vacc
+slcp_overlapccohorts,147,Flu + LC code + vacc
+slcp_overlapccohorts,148,Flu + LC code + not vacc
+slcp_overlapccohorts,149,Inf + PASC any + vacc
+slcp_overlapccohorts,150,Inf + PASC any + not vacc
+slcp_overlapccohorts,151,Reinf + PASC any + vacc
+slcp_overlapccohorts,152,Reinf + PASC any + not vacc
+slcp_overlapccohorts,153,Neg + PASC any + vacc
+slcp_overlapccohorts,154,Neg + PASC any + not vacc
+slcp_overlapccohorts,155,Flu + PASC any + vacc
+slcp_overlapccohorts,156,Flu + PASC any + not vacc
+slcp_overlapipcohorts,1,Base 1 LC outcome 1
+slcp_overlapipcohorts,2,Base 1 LC outcome 2
+slcp_overlapipcohorts,3,Base 1 LC outcome 3
+slcp_overlapipcohorts,4,Base 1 LC outcome 4
+slcp_overlapipcohorts,5,Base 1 LC outcome 5
+slcp_overlapipcohorts,6,Base 1 LC outcome 6
+slcp_overlapipcohorts,7,Base 1 LC outcome 7
+slcp_overlapipcohorts,8,Base 1 LC outcome 8
+slcp_overlapipcohorts,9,Base 1 LC outcome 9
+slcp_overlapipcohorts,10,Base 1 LC outcome 10
+slcp_overlapipcohorts,11,Base 1 LC outcome 11
+slcp_overlapipcohorts,12,Base 1 LC outcome 12
+slcp_overlapipcohorts,13,Base 1 LC outcome 13
+slcp_overlapipcohorts,14,Base 1 LC outcome 14
+slcp_overlapipcohorts,15,Base 1 LC outcome 15
+slcp_overlapipcohorts,16,Base 1 LC outcome 16
+slcp_overlapipcohorts,17,Base 1 LC outcome 17
+slcp_overlapipcohorts,18,Base 1 LC outcome 18
+slcp_overlapipcohorts,19,Base 1 LC outcome 19
+slcp_overlapipcohorts,20,Base 1 LC outcome 20
+slcp_overlapipcohorts,21,Base 1 LC outcome 21
+slcp_overlapipcohorts,22,Base 1 LC outcome 22
+slcp_overlapipcohorts,23,Base 1 LC outcome 23
+slcp_overlapipcohorts,24,Base 1 LC outcome 24
+slcp_overlapipcohorts,25,Base 1 LC outcome 25
+slcp_overlapipcohorts,26,Base 2 LC outcome 1
+slcp_overlapipcohorts,27,Base 2 LC outcome 2
+slcp_overlapipcohorts,28,Base 2 LC outcome 3
+slcp_overlapipcohorts,29,Base 2 LC outcome 4
+slcp_overlapipcohorts,30,Base 2 LC outcome 5
+slcp_overlapipcohorts,31,Base 2 LC outcome 6
+slcp_overlapipcohorts,32,Base 2 LC outcome 7
+slcp_overlapipcohorts,33,Base 2 LC outcome 8
+slcp_overlapipcohorts,34,Base 2 LC outcome 9
+slcp_overlapipcohorts,35,Base 2 LC outcome 10
+slcp_overlapipcohorts,36,Base 2 LC outcome 11
+slcp_overlapipcohorts,37,Base 2 LC outcome 12
+slcp_overlapipcohorts,38,Base 2 LC outcome 13
+slcp_overlapipcohorts,39,Base 2 LC outcome 14
+slcp_overlapipcohorts,40,Base 2 LC outcome 15
+slcp_overlapipcohorts,41,Base 2 LC outcome 16
+slcp_overlapipcohorts,42,Base 2 LC outcome 17
+slcp_overlapipcohorts,43,Base 2 LC outcome 18
+slcp_overlapipcohorts,44,Base 2 LC outcome 19
+slcp_overlapipcohorts,45,Base 2 LC outcome 20
+slcp_overlapipcohorts,46,Base 2 LC outcome 21
+slcp_overlapipcohorts,47,Base 2 LC outcome 22
+slcp_overlapipcohorts,48,Base 2 LC outcome 23
+slcp_overlapipcohorts,49,Base 2 LC outcome 24
+slcp_overlapipcohorts,50,Base 2 LC outcome 25
+slcp_overlapipcohorts,51,Base 3 LC outcome 1
+slcp_overlapipcohorts,52,Base 3 LC outcome 2
+slcp_overlapipcohorts,53,Base 3 LC outcome 3
+slcp_overlapipcohorts,54,Base 3 LC outcome 4
+slcp_overlapipcohorts,55,Base 3 LC outcome 5
+slcp_overlapipcohorts,56,Base 3 LC outcome 6
+slcp_overlapipcohorts,57,Base 3 LC outcome 7
+slcp_overlapipcohorts,58,Base 3 LC outcome 8
+slcp_overlapipcohorts,59,Base 3 LC outcome 9
+slcp_overlapipcohorts,60,Base 3 LC outcome 10
+slcp_overlapipcohorts,61,Base 3 LC outcome 11
+slcp_overlapipcohorts,62,Base 3 LC outcome 12
+slcp_overlapipcohorts,63,Base 3 LC outcome 13
+slcp_overlapipcohorts,64,Base 3 LC outcome 14
+slcp_overlapipcohorts,65,Base 3 LC outcome 15
+slcp_overlapipcohorts,66,Base 3 LC outcome 16
+slcp_overlapipcohorts,67,Base 3 LC outcome 17
+slcp_overlapipcohorts,68,Base 3 LC outcome 18
+slcp_overlapipcohorts,69,Base 3 LC outcome 19
+slcp_overlapipcohorts,70,Base 3 LC outcome 20
+slcp_overlapipcohorts,71,Base 3 LC outcome 21
+slcp_overlapipcohorts,72,Base 3 LC outcome 22
+slcp_overlapipcohorts,73,Base 3 LC outcome 23
+slcp_overlapipcohorts,74,Base 3 LC outcome 24
+slcp_overlapipcohorts,75,Base 3 LC outcome 25
+slcp_overlapipcohorts,76,Base 4 LC outcome 1
+slcp_overlapipcohorts,77,Base 4 LC outcome 2
+slcp_overlapipcohorts,78,Base 4 LC outcome 3
+slcp_overlapipcohorts,79,Base 4 LC outcome 4
+slcp_overlapipcohorts,80,Base 4 LC outcome 5
+slcp_overlapipcohorts,81,Base 4 LC outcome 6
+slcp_overlapipcohorts,82,Base 4 LC outcome 7
+slcp_overlapipcohorts,83,Base 4 LC outcome 8
+slcp_overlapipcohorts,84,Base 4 LC outcome 9
+slcp_overlapipcohorts,85,Base 4 LC outcome 10
+slcp_overlapipcohorts,86,Base 4 LC outcome 11
+slcp_overlapipcohorts,87,Base 4 LC outcome 12
+slcp_overlapipcohorts,88,Base 4 LC outcome 13
+slcp_overlapipcohorts,89,Base 4 LC outcome 14
+slcp_overlapipcohorts,90,Base 4 LC outcome 15
+slcp_overlapipcohorts,91,Base 4 LC outcome 16
+slcp_overlapipcohorts,92,Base 4 LC outcome 17
+slcp_overlapipcohorts,93,Base 4 LC outcome 18
+slcp_overlapipcohorts,94,Base 4 LC outcome 19
+slcp_overlapipcohorts,95,Base 4 LC outcome 20
+slcp_overlapipcohorts,96,Base 4 LC outcome 21
+slcp_overlapipcohorts,97,Base 4 LC outcome 22
+slcp_overlapipcohorts,98,Base 4 LC outcome 23
+slcp_overlapipcohorts,99,Base 4 LC outcome 24
+slcp_overlapipcohorts,100,Base 4 LC outcome 25
+slcp_overlapipcohorts,101,Base 1 PASC outcome 1
+slcp_overlapipcohorts,102,Base 1 PASC outcome 2
+slcp_overlapipcohorts,103,Base 1 PASC outcome 3
+slcp_overlapipcohorts,104,Base 1 PASC outcome 4
+slcp_overlapipcohorts,105,Base 1 PASC outcome 5
+slcp_overlapipcohorts,106,Base 1 PASC outcome 6
+slcp_overlapipcohorts,107,Base 1 PASC outcome 7
+slcp_overlapipcohorts,108,Base 1 PASC outcome 8
+slcp_overlapipcohorts,109,Base 1 PASC outcome 9
+slcp_overlapipcohorts,110,Base 1 PASC outcome 10
+slcp_overlapipcohorts,111,Base 2 PASC outcome 1
+slcp_overlapipcohorts,112,Base 2 PASC outcome 2
+slcp_overlapipcohorts,113,Base 2 PASC outcome 3
+slcp_overlapipcohorts,114,Base 2 PASC outcome 4
+slcp_overlapipcohorts,115,Base 2 PASC outcome 5
+slcp_overlapipcohorts,116,Base 2 PASC outcome 6
+slcp_overlapipcohorts,117,Base 2 PASC outcome 7
+slcp_overlapipcohorts,118,Base 2 PASC outcome 8
+slcp_overlapipcohorts,119,Base 2 PASC outcome 9
+slcp_overlapipcohorts,120,Base 2 PASC outcome 10
+slcp_overlapipcohorts,121,Base 3 PASC outcome 1
+slcp_overlapipcohorts,122,Base 3 PASC outcome 2
+slcp_overlapipcohorts,123,Base 3 PASC outcome 3
+slcp_overlapipcohorts,124,Base 3 PASC outcome 4
+slcp_overlapipcohorts,125,Base 3 PASC outcome 5
+slcp_overlapipcohorts,126,Base 3 PASC outcome 6
+slcp_overlapipcohorts,127,Base 3 PASC outcome 7
+slcp_overlapipcohorts,128,Base 3 PASC outcome 8
+slcp_overlapipcohorts,129,Base 3 PASC outcome 9
+slcp_overlapipcohorts,130,Base 3 PASC outcome 10
+slcp_overlapipcohorts,131,Base 4 PASC outcome 1
+slcp_overlapipcohorts,132,Base 4 PASC outcome 2
+slcp_overlapipcohorts,133,Base 4 PASC outcome 3
+slcp_overlapipcohorts,134,Base 4 PASC outcome 4
+slcp_overlapipcohorts,135,Base 4 PASC outcome 5
+slcp_overlapipcohorts,136,Base 4 PASC outcome 6
+slcp_overlapipcohorts,137,Base 4 PASC outcome 7
+slcp_overlapipcohorts,138,Base 4 PASC outcome 8
+slcp_overlapipcohorts,139,Base 4 PASC outcome 9
+slcp_overlapipcohorts,140,Base 4 PASC outcome 10
+slcp_overlapipcohorts,141,Base 1 MC outcome 1
+slcp_overlapipcohorts,142,Base 1 MC outcome 2
+slcp_overlapipcohorts,143,Base 1 MC outcome 3
+slcp_overlapipcohorts,144,Base 1 MC outcome 4
+slcp_overlapipcohorts,145,Base 1 MC outcome 5
+slcp_overlapipcohorts,146,Base 1 MC outcome 6
+slcp_overlapipcohorts,147,Base 1 MC outcome 7
+slcp_overlapipcohorts,148,Base 1 MC outcome 8
+slcp_overlapipcohorts,149,Base 1 MC outcome 9
+slcp_overlapipcohorts,150,Base 1 MC outcome 10
+slcp_overlapipcohorts,151,Base 1 MC outcome 11
+slcp_overlapipcohorts,152,Base 1 MC outcome 12
+slcp_overlapipcohorts,153,Base 1 MC outcome 13
+slcp_overlapipcohorts,154,Base 1 MC outcome 14
+slcp_overlapipcohorts,155,Base 1 MC outcome 15
+slcp_overlapipcohorts,156,Base 1 MC outcome 16
+slcp_overlapipcohorts,157,Base 1 MC outcome 17
+slcp_overlapipcohorts,158,Base 1 MC outcome 18
+slcp_overlapipcohorts,159,Base 1 MC outcome 19
+slcp_overlapipcohorts,160,Base 1 MC outcome 20
+slcp_overlapipcohorts,161,Base 1 MC outcome 21
+slcp_overlapipcohorts,162,Base 1 MC outcome 22
+slcp_overlapipcohorts,163,Base 1 MC outcome 23
+slcp_overlapipcohorts,164,Base 1 MC outcome 24
+slcp_overlapipcohorts,165,Base 2 MC outcome 1
+slcp_overlapipcohorts,166,Base 2 MC outcome 2
+slcp_overlapipcohorts,167,Base 2 MC outcome 3
+slcp_overlapipcohorts,168,Base 2 MC outcome 4
+slcp_overlapipcohorts,169,Base 2 MC outcome 5
+slcp_overlapipcohorts,170,Base 2 MC outcome 6
+slcp_overlapipcohorts,171,Base 2 MC outcome 7
+slcp_overlapipcohorts,172,Base 2 MC outcome 8
+slcp_overlapipcohorts,173,Base 2 MC outcome 9
+slcp_overlapipcohorts,174,Base 2 MC outcome 10
+slcp_overlapipcohorts,175,Base 2 MC outcome 11
+slcp_overlapipcohorts,176,Base 2 MC outcome 12
+slcp_overlapipcohorts,177,Base 2 MC outcome 13
+slcp_overlapipcohorts,178,Base 2 MC outcome 14
+slcp_overlapipcohorts,179,Base 2 MC outcome 15
+slcp_overlapipcohorts,180,Base 2 MC outcome 16
+slcp_overlapipcohorts,181,Base 2 MC outcome 17
+slcp_overlapipcohorts,182,Base 2 MC outcome 18
+slcp_overlapipcohorts,183,Base 2 MC outcome 19
+slcp_overlapipcohorts,184,Base 2 MC outcome 20
+slcp_overlapipcohorts,185,Base 2 MC outcome 21
+slcp_overlapipcohorts,186,Base 2 MC outcome 22
+slcp_overlapipcohorts,187,Base 2 MC outcome 23
+slcp_overlapipcohorts,188,Base 2 MC outcome 24
+slcp_overlapipcohorts,189,Base 3 MC outcome 1
+slcp_overlapipcohorts,190,Base 3 MC outcome 2
+slcp_overlapipcohorts,191,Base 3 MC outcome 3
+slcp_overlapipcohorts,192,Base 3 MC outcome 4
+slcp_overlapipcohorts,193,Base 3 MC outcome 5
+slcp_overlapipcohorts,194,Base 3 MC outcome 6
+slcp_overlapipcohorts,195,Base 3 MC outcome 7
+slcp_overlapipcohorts,196,Base 3 MC outcome 8
+slcp_overlapipcohorts,197,Base 3 MC outcome 9
+slcp_overlapipcohorts,198,Base 3 MC outcome 10
+slcp_overlapipcohorts,199,Base 3 MC outcome 11
+slcp_overlapipcohorts,200,Base 3 MC outcome 12
+slcp_overlapipcohorts,201,Base 3 MC outcome 13
+slcp_overlapipcohorts,202,Base 3 MC outcome 14
+slcp_overlapipcohorts,203,Base 3 MC outcome 15
+slcp_overlapipcohorts,204,Base 3 MC outcome 16
+slcp_overlapipcohorts,205,Base 3 MC outcome 17
+slcp_overlapipcohorts,206,Base 3 MC outcome 18
+slcp_overlapipcohorts,207,Base 3 MC outcome 19
+slcp_overlapipcohorts,208,Base 3 MC outcome 20
+slcp_overlapipcohorts,209,Base 3 MC outcome 21
+slcp_overlapipcohorts,210,Base 3 MC outcome 22
+slcp_overlapipcohorts,211,Base 3 MC outcome 23
+slcp_overlapipcohorts,212,Base 3 MC outcome 24
+slcp_overlapipcohorts,213,Base 4 MC outcome 1
+slcp_overlapipcohorts,214,Base 4 MC outcome 2
+slcp_overlapipcohorts,215,Base 4 MC outcome 3
+slcp_overlapipcohorts,216,Base 4 MC outcome 4
+slcp_overlapipcohorts,217,Base 4 MC outcome 5
+slcp_overlapipcohorts,218,Base 4 MC outcome 6
+slcp_overlapipcohorts,219,Base 4 MC outcome 7
+slcp_overlapipcohorts,220,Base 4 MC outcome 8
+slcp_overlapipcohorts,221,Base 4 MC outcome 9
+slcp_overlapipcohorts,222,Base 4 MC outcome 10
+slcp_overlapipcohorts,223,Base 4 MC outcome 11
+slcp_overlapipcohorts,224,Base 4 MC outcome 12
+slcp_overlapipcohorts,225,Base 4 MC outcome 13
+slcp_overlapipcohorts,226,Base 4 MC outcome 14
+slcp_overlapipcohorts,227,Base 4 MC outcome 15
+slcp_overlapipcohorts,228,Base 4 MC outcome 16
+slcp_overlapipcohorts,229,Base 4 MC outcome 17
+slcp_overlapipcohorts,230,Base 4 MC outcome 18
+slcp_overlapipcohorts,231,Base 4 MC outcome 19
+slcp_overlapipcohorts,232,Base 4 MC outcome 20
+slcp_overlapipcohorts,233,Base 4 MC outcome 21
+slcp_overlapipcohorts,234,Base 4 MC outcome 22
+slcp_overlapipcohorts,235,Base 4 MC outcome 23
+slcp_overlapipcohorts,236,Base 4 MC outcome 24
+slcp_basecohorts,45,Inf + vacc
+slcp_basecohorts,46,Inf + not vacc
+slcp_basecohorts,47,Reinf + vacc
+slcp_basecohorts,48,Reinf + not vacc
+slcp_basecohorts,49,Neg + vacc
+slcp_basecohorts,50,Neg + not vacc
+slcp_basecohorts,51,Flu + vacc
+slcp_basecohorts,52,Flu + not vacc
+slcp_basecohorts,53,Inf Delta
+slcp_basecohorts,54,Inf Omicron
+slcp_basecohorts,55,Reinf Delta
+slcp_basecohorts,56,Reinf Omicron
+slcp_basecohorts,57,Neg Delta
+slcp_basecohorts,58,Neg Omicron
+slcp_basecohorts,59,Flu Delta
+slcp_basecohorts,60,Flu Omicron
+slcp_overlapccohorts,157,Inf + LC Any + Delta
+slcp_overlapccohorts,158,Inf + LC Any + Omicron
+slcp_overlapccohorts,159,Reinf + LC Any + Delta
+slcp_overlapccohorts,160,Reinf + LC Any + Omicron
+slcp_overlapccohorts,161,Neg + LC Any + Delta
+slcp_overlapccohorts,162,Neg + LC Any + Omicron
+slcp_overlapccohorts,163,Flu + LC Any + Delta
+slcp_overlapccohorts,164,Flu + LC Any + Omicron
+slcp_overlapccohorts,165,Inf + LC Code + Delta
+slcp_overlapccohorts,166,Inf + LC Code + Omicron
+slcp_overlapccohorts,167,Reinf + LC Code + Delta
+slcp_overlapccohorts,168,Reinf + LC Code + Omicron
+slcp_overlapccohorts,169,Neg + LC Code + Delta
+slcp_overlapccohorts,170,Neg + LC Code + Omicron
+slcp_overlapccohorts,171,Flu + LC Code + Delta
+slcp_overlapccohorts,172,Flu + LC Code + Omicron
+slcp_overlapccohorts,173,Inf + PASC Any + Delta
+slcp_overlapccohorts,174,Inf + PASC Any + Omicron
+slcp_overlapccohorts,175,Reinf + PASC Any + Delta
+slcp_overlapccohorts,176,Reinf + PASC Any + Omicron
+slcp_overlapccohorts,177,Neg + PASC Any + Delta
+slcp_overlapccohorts,178,Neg + PASC Any + Omicron
+slcp_overlapccohorts,179,Flu + PASC Any + Delta
+slcp_overlapccohorts,180,Flu + PASC Any + Omicron
+slcp_basecohorts,13,"Inf age (0,2)"
+slcp_basecohorts,14,"Inf age (3,5)"
+slcp_basecohorts,15,"Inf age (6,9)"
+slcp_basecohorts,16,"Inf age (10,13)"
+slcp_basecohorts,17,"Inf age (14,17)"
+slcp_basecohorts,18,"Inf age (18,40)"
+slcp_basecohorts,19,"Inf age (41,64)"
+slcp_basecohorts,20,"Inf age (65,120)"
+slcp_basecohorts,21,"Reinf age (0,2)"
+slcp_basecohorts,22,"Reinf age (3,5)"
+slcp_basecohorts,23,"Reinf age (6,9)"
+slcp_basecohorts,24,"Reinf age (10,13)"
+slcp_basecohorts,25,"Reinf age (14,17)"
+slcp_basecohorts,26,"Reinf age (18,40)"
+slcp_basecohorts,27,"Reinf age (41,64)"
+slcp_basecohorts,28,"Reinf age (65,120)"
+slcp_basecohorts,29,"Neg age (0,2)"
+slcp_basecohorts,30,"Neg age (3,5)"
+slcp_basecohorts,31,"Neg age (6,9)"
+slcp_basecohorts,32,"Neg age (10,13)"
+slcp_basecohorts,33,"Neg age (14,17)"
+slcp_basecohorts,34,"Neg age (18,40)"
+slcp_basecohorts,35,"Neg age (41,64)"
+slcp_basecohorts,36,"Neg age (65,120)"
+slcp_basecohorts,37,"Flu age (0,2)"
+slcp_basecohorts,38,"Flu age (3,5)"
+slcp_basecohorts,39,"Flu age (6,9)"
+slcp_basecohorts,40,"Flu age (10,13)"
+slcp_basecohorts,41,"Flu age (14,17)"
+slcp_basecohorts,42,"Flu age (18,40)"
+slcp_basecohorts,43,"Flu age (41,64)"
+slcp_basecohorts,44,"Flu age (65,120)"
+slcp_overlapccohorts,37,"Inf + LC any + age (0,2)"
+slcp_overlapccohorts,38,"Inf + LC any + age (3,5)"
+slcp_overlapccohorts,39,"Inf + LC any + age (6,9)"
+slcp_overlapccohorts,40,"Inf + LC any + age (10,13)"
+slcp_overlapccohorts,41,"Inf + LC any + age (14,17)"
+slcp_overlapccohorts,42,"Inf + LC any + age (18,40)"
+slcp_overlapccohorts,43,"Inf + LC any + age (41,64)"
+slcp_overlapccohorts,44,"Inf + LC any + age (65,120)"
+slcp_overlapccohorts,45,"Reinf + LC any + age (0,2)"
+slcp_overlapccohorts,46,"Reinf + LC any + age (3,5)"
+slcp_overlapccohorts,47,"Reinf + LC any + age (6,9)"
+slcp_overlapccohorts,48,"Reinf + LC any + age (10,13)"
+slcp_overlapccohorts,49,"Reinf + LC any + age (14,17)"
+slcp_overlapccohorts,50,"Reinf + LC any + age (18,40)"
+slcp_overlapccohorts,51,"Reinf + LC any + age (41,64)"
+slcp_overlapccohorts,52,"Reinf + LC any + age (65,120)"
+slcp_overlapccohorts,53,"Neg + LC any + age (0,2)"
+slcp_overlapccohorts,54,"Neg + LC any + age (3,5)"
+slcp_overlapccohorts,55,"Neg + LC any + age (6,9)"
+slcp_overlapccohorts,56,"Neg + LC any + age (10,13)"
+slcp_overlapccohorts,57,"Neg + LC any + age (14,17)"
+slcp_overlapccohorts,58,"Neg + LC any + age (18,40)"
+slcp_overlapccohorts,59,"Neg + LC any + age (41,64)"
+slcp_overlapccohorts,60,"Neg + LC any + age (65,120)"
+slcp_overlapccohorts,61,"Flu + LC any + age (0,2)"
+slcp_overlapccohorts,62,"Flu + LC any + age (3,5)"
+slcp_overlapccohorts,63,"Flu + LC any + age (6,9)"
+slcp_overlapccohorts,64,"Flu + LC any + age (10,13)"
+slcp_overlapccohorts,65,"Flu + LC any + age (14,17)"
+slcp_overlapccohorts,66,"Flu + LC any + age (18,40)"
+slcp_overlapccohorts,67,"Flu + LC any + age (41,64)"
+slcp_overlapccohorts,68,"Flu + LC any + age (65,120)"
+slcp_overlapccohorts,69,"Inf + LC code + age (0,2)"
+slcp_overlapccohorts,70,"Inf + LC code + age (3,5)"
+slcp_overlapccohorts,71,"Inf + LC code + age (6,9)"
+slcp_overlapccohorts,72,"Inf + LC code + age (10,13)"
+slcp_overlapccohorts,73,"Inf + LC code + age (14,17)"
+slcp_overlapccohorts,74,"Inf + LC code + age (18,40)"
+slcp_overlapccohorts,75,"Inf + LC code + age (41,64)"
+slcp_overlapccohorts,76,"Inf + LC code + age (65,120)"
+slcp_overlapccohorts,77,"Reinf + LC code + age (0,2)"
+slcp_overlapccohorts,78,"Reinf + LC code + age (3,5)"
+slcp_overlapccohorts,79,"Reinf + LC code + age (6,9)"
+slcp_overlapccohorts,80,"Reinf + LC code + age (10,13)"
+slcp_overlapccohorts,81,"Reinf + LC code + age (14,17)"
+slcp_overlapccohorts,82,"Reinf + LC code + age (18,40)"
+slcp_overlapccohorts,83,"Reinf + LC code + age (41,64)"
+slcp_overlapccohorts,84,"Reinf + LC code + age (65,120)"
+slcp_overlapccohorts,85,"Neg + LC code + age (0,2)"
+slcp_overlapccohorts,86,"Neg + LC code + age (3,5)"
+slcp_overlapccohorts,87,"Neg + LC code + age (6,9)"
+slcp_overlapccohorts,88,"Neg + LC code + age (10,13)"
+slcp_overlapccohorts,89,"Neg + LC code + age (14,17)"
+slcp_overlapccohorts,90,"Neg + LC code + age (18,40)"
+slcp_overlapccohorts,91,"Neg + LC code + age (41,64)"
+slcp_overlapccohorts,92,"Neg + LC code + age (65,120)"
+slcp_overlapccohorts,93,"Flu + LC code + age (0,2)"
+slcp_overlapccohorts,94,"Flu + LC code + age (3,5)"
+slcp_overlapccohorts,95,"Flu + LC code + age (6,9)"
+slcp_overlapccohorts,96,"Flu + LC code + age (10,13)"
+slcp_overlapccohorts,97,"Flu + LC code + age (14,17)"
+slcp_overlapccohorts,98,"Flu + LC code + age (18,40)"
+slcp_overlapccohorts,99,"Flu + LC code + age (41,64)"
+slcp_overlapccohorts,100,"Flu + LC code + age (65,120)"
+slcp_overlapccohorts,101,"Inf + PASC any + age (0,2)"
+slcp_overlapccohorts,102,"Inf + PASC any + age (3,5)"
+slcp_overlapccohorts,103,"Inf + PASC any + age (6,9)"
+slcp_overlapccohorts,104,"Inf + PASC any + age (10,13)"
+slcp_overlapccohorts,105,"Inf + PASC any + age (14,17)"
+slcp_overlapccohorts,106,"Inf + PASC any + age (18,40)"
+slcp_overlapccohorts,107,"Inf + PASC any + age (41,64)"
+slcp_overlapccohorts,108,"Inf + PASC any + age (65,120)"
+slcp_overlapccohorts,109,"Reinf + PASC any + age (0,2)"
+slcp_overlapccohorts,110,"Reinf + PASC any + age (3,5)"
+slcp_overlapccohorts,111,"Reinf + PASC any + age (6,9)"
+slcp_overlapccohorts,112,"Reinf + PASC any + age (10,13)"
+slcp_overlapccohorts,113,"Reinf + PASC any + age (14,17)"
+slcp_overlapccohorts,114,"Reinf + PASC any + age (18,40)"
+slcp_overlapccohorts,115,"Reinf + PASC any + age (41,64)"
+slcp_overlapccohorts,116,"Reinf + PASC any + age (65,120)"
+slcp_overlapccohorts,117,"Neg + PASC any + age (0,2)"
+slcp_overlapccohorts,118,"Neg + PASC any + age (3,5)"
+slcp_overlapccohorts,119,"Neg + PASC any + age (6,9)"
+slcp_overlapccohorts,120,"Neg + PASC any + age (10,13)"
+slcp_overlapccohorts,121,"Neg + PASC any + age (14,17)"
+slcp_overlapccohorts,122,"Neg + PASC any + age (18,40)"
+slcp_overlapccohorts,123,"Neg + PASC any + age (41,64)"
+slcp_overlapccohorts,124,"Neg + PASC any + age (65,120)"
+slcp_overlapccohorts,125,"Flu + PASC any + age (0,2)"
+slcp_overlapccohorts,126,"Flu + PASC any + age (3,5)"
+slcp_overlapccohorts,127,"Flu + PASC any + age (6,9)"
+slcp_overlapccohorts,128,"Flu + PASC any + age (10,13)"
+slcp_overlapccohorts,129,"Flu + PASC any + age (14,17)"
+slcp_overlapccohorts,130,"Flu + PASC any + age (18,40)"
+slcp_overlapccohorts,131,"Flu + PASC any + age (41,64)"
+slcp_overlapccohorts,132,"Flu + PASC any + age (65,120)"
+slcp_basecohorts,5,Inf females
+slcp_basecohorts,6,Inf males
+slcp_basecohorts,7,Reinf females
+slcp_basecohorts,8,Reinf males
+slcp_basecohorts,9,Neg females
+slcp_basecohorts,10,Neg males
+slcp_basecohorts,11,Flu females
+slcp_basecohorts,12,Flu males
+slcp_overlapccohorts,13,Inf + LC Any + females
+slcp_overlapccohorts,14,Inf + LC Any + males
+slcp_overlapccohorts,15,Reinf + LC Any + females
+slcp_overlapccohorts,16,Reinf + LC Any + males
+slcp_overlapccohorts,17,Neg + LC Any + females
+slcp_overlapccohorts,18,Neg + LC Any + males
+slcp_overlapccohorts,19,Flu + LC Any + females
+slcp_overlapccohorts,20,Flu + LC Any + males
+slcp_overlapccohorts,21,Inf + LC Code + females
+slcp_overlapccohorts,22,Inf + LC Code + males
+slcp_overlapccohorts,23,Reinf + LC Code + females
+slcp_overlapccohorts,24,Reinf + LC Code + males
+slcp_overlapccohorts,25,Neg + LC Code + females
+slcp_overlapccohorts,26,Neg + LC Code + males
+slcp_overlapccohorts,27,Flu + LC Code + females
+slcp_overlapccohorts,28,Flu + LC Code + males
+slcp_overlapccohorts,29,Inf + PASC Any + females
+slcp_overlapccohorts,30,Inf + PASC Any + males
+slcp_overlapccohorts,31,Reinf + PASC Any + females
+slcp_overlapccohorts,32,Reinf + PASC Any + males
+slcp_overlapccohorts,33,Neg + PASC Any + females
+slcp_overlapccohorts,34,Neg + PASC Any + males
+slcp_overlapccohorts,35,Flu + PASC Any + females
+slcp_overlapccohorts,36,Flu + PASC Any + males
+slcp_basecohorts,61,Remdesivir
+slcp_basecohorts,62,Bamlanivimab_Etesevimab
+slcp_basecohorts,63,Casirivimab_Imdevimab
+slcp_basecohorts,64,Sotrovimab
+slcp_basecohorts,65,Bebtelovimab
+slcp_basecohorts,66,Dexamethasone
+slcp_basecohorts,67,Corticosteroids
+slcp_basecohorts,68,Baricitinib
+slcp_basecohorts,69,Tocilizumab
+slcp_basecohorts,70,Ruxolitinib
+slcp_basecohorts,71,Anakinra
+slcp_basecohorts,72,Tixagevimab_Cilgavimab
+slcp_basecohorts,73,Regdanvimab
+slcp_basecohorts,74,Covid19_convalescent_plasma
+slcp_basecohorts,75,Ivermectin
+slcp_basecohorts,76,Fluvoxamine
+slcp_basecohorts,77,Colchicine
+slcp_basecohorts,78,Hydroxychloroquine
+slcp_basecohorts,79,Lopinavir_ritonavir
+slcp_basecohorts,80,Nitazoxanide
+slcp_basecohorts,81,Immunomodulatory_drugs
+slcp_basecohorts,82,Antithrombotic_agents
+slcp_basecohorts,83,Antibiotics
+slcp_basecohorts,84,Anti_inflammatory_drugs
+slcp_basecohorts,85,ACEI
+slcp_basecohorts,86,ARB
+slcp_basecohorts,87,Metmorfin
+slcp_basecohorts,88,HMG-CoA_inhibitors
+slcp_basecohorts,89,H-2_receptor_antagonists
+slcp_basecohorts,90,Paxlovid
+slcp_basecohorts,91,Nirmatrelevir_ritonavir
+slcp_basecohorts,92,Molnupiravir
+slcp_overlapccohorts,181,Remdesivir
+slcp_overlapccohorts,182,Bamlanivimab_Etesevimab
+slcp_overlapccohorts,183,Casirivimab_Imdevimab
+slcp_overlapccohorts,184,Sotrovimab
+slcp_overlapccohorts,185,Bebtelovimab
+slcp_overlapccohorts,186,Dexamethasone
+slcp_overlapccohorts,187,Corticosteroids
+slcp_overlapccohorts,188,Baricitinib
+slcp_overlapccohorts,189,Tocilizumab
+slcp_overlapccohorts,190,Ruxolitinib
+slcp_overlapccohorts,191,Anakinra
+slcp_overlapccohorts,192,Tixagevimab_Cilgavimab
+slcp_overlapccohorts,193,Regdanvimab
+slcp_overlapccohorts,194,Covid19_convalescent_plasma
+slcp_overlapccohorts,195,Ivermectin
+slcp_overlapccohorts,196,Fluvoxamine
+slcp_overlapccohorts,197,Colchicine
+slcp_overlapccohorts,198,Hydroxychloroquine
+slcp_overlapccohorts,199,Lopinavir_ritonavir
+slcp_overlapccohorts,200,Nitazoxanide
+slcp_overlapccohorts,201,Immunomodulatory_drugs
+slcp_overlapccohorts,202,Antithrombotic_agents
+slcp_overlapccohorts,203,Antibiotics
+slcp_overlapccohorts,204,Anti_inflammatory_drugs
+slcp_overlapccohorts,205,ACEI
+slcp_overlapccohorts,206,ARB
+slcp_overlapccohorts,207,Metmorfin
+slcp_overlapccohorts,208,HMG-CoA_inhibitors
+slcp_overlapccohorts,209,H-2_receptor_antagonists
+slcp_overlapccohorts,210,Paxlovid
+slcp_overlapccohorts,211,Nirmatrelevir_ritonavir
+slcp_overlapccohorts,212,Molnupiravir
+slcp_hucohorts,1,1_ICU
+slcp_hucohorts,2,2_Ventilation
+slcp_hucohorts,3,3_Tracheostomy
+slcp_hucohorts,4,4_ECMO
+slcp_trajcohort,1,LC any + code Trajectories

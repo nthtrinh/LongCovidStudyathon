@@ -1,0 +1,28 @@
+cohort_definition_id,cohort_name
+1,Abdominal_pain
+2,Allergy
+3,Altered_smell_taste
+4,Anxiety
+5,Blurred_vision
+6,Chest pain or angina
+7,Cognitive_dysfunction_brain_fog
+8,Cough
+9,Depression wo recurrence
+10,Dizziness
+11,Dyspnea
+12,Fatigue_malaise
+13,Gastrointestinal_issues
+14,Headache
+15,Intermittent_fever
+16,Joint_pain
+17,Memory_issues
+18,Menstrual_problems
+19,Muscle_spasms_and_pain
+20,Neuralgia
+21,Pins_and_needles_sensation
+22,Postexertional_fatigue
+23,Sleep_disorder
+24,Tachycardia
+25,Tinnitus_hearing_problems
+26,Any LC symptom
+27,LC code
