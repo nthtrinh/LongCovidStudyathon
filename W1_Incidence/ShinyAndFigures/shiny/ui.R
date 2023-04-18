@@ -44,7 +44,7 @@ ui <- fluidPage(
     ),
     
     ## Incidence ------ 
-    tabPanel("Population incidence",	  
+    tabPanel("Population incidence!",	  
              tags$h3("Incidence estimates"),
              tags$h5("Incidence estimates are shown below...."),
              tags$hr(),
