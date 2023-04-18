@@ -50,7 +50,7 @@ server <- function(input, output, session) {
     mydata <- mydata - 1 
     factors <- (colSums(mydata))/(length(mydata[[1]]))	
     factors <- as.matrix(factors)
-    rownames(factors) <- names_symptoms$cohort_name[1:24]
+    rownames(factors) <- names_symptoms$cohort_name[1:25]
     
     # Why NAs?
     
