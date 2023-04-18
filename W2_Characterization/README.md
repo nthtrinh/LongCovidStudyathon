@@ -8,3 +8,6 @@ Lead: [@ajoedicke](https://github.com/ajoedicke)
 - To characterise people with acute COVID-19 infections, post-acute sequelae SARS-CoV-2 (PASC), and long COVID.
 - To study the utilisation of pre-specified drugs of interest among people with COVID-19, PASC and long COVID.
 - To study treatment patterns/trajectories of all drugs among people with COVID-19, PASC and long COVID.
+
+## RShiny app
+https://dpa-pde-oxford.shinyapps.io/LongCovidCharacterisation/
