@@ -1,0 +1,45 @@
+Interested,chapter,name
+N,Blood and blood-forming organs disease and certain disorders involving the immune mechanism (machine translation),Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
+N,Certain conditions originating in the perinatal period,Perinatal
+Y,Certain infectious and parasitic diseases,A Certain infectious and parasitic diseases
+N,Certain infectious and parasitic diseases (machine translation),Other
+N,Circulatory system diseases (machine translation),Diseases of the circulatory system
+N,Codes for special purposes,Other
+N,"Congenital malformations, deformations and chromosomal abnormalities","Congenital malformations, deformations and chromosomal abnormalities"
+N,"Congenital malformations, deformations and chromosomal abnormalities (machine translation)","Congenital malformations, deformations and chromosomal abnormalities"
+N,Digestive diseases (machine translation),Diseases of the digestive system
+Y,Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,D Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
+Y,Diseases of the circulatory system,I Diseases of the circulatory system
+Y,Diseases of the digestive system,K Diseases of the digestive system
+N,Diseases of the ear and mastoid process,Diseases of the ear and mastoid process
+N,Diseases of the eye and adnexa,Diseases of the eye and adnexa
+N,Diseases of the genitourinary system,Diseases of the genitourinary system
+Y,Diseases of the musculoskeletal system and connective tissue,M Diseases of the musculoskeletal system and connective tissue
+Y,Diseases of the nervous system,G Diseases of the nervous system
+Y,Diseases of the respiratory system,J Diseases of the respiratory system
+Y,Diseases of the skin and subcutaneous tissue,L Diseases of the skin and subcutaneous tissue
+N,Ear and mastoid disease (machine translation),Diseases of the ear and mastoid process
+Y,"Endocrine, nutritional and metabolic diseases","E Endocrine, nutritional and metabolic diseases"
+N,"Endocrine, nutritional and metabolic diseases (machine translation)","Endocrine, nutritional and metabolic diseases"
+N,External causes of illness and death (machine translation),Other
+N,External causes of morbidity and mortality,Other
+N,Eye diseases and adnexa (machine translation),Diseases of the eye and adnexa
+N,Factors influencing health status and contact with health services,Other
+N,For encoding special purpose (machine translation),Other
+N,Genito-urinary system diseases (machine translation),Genito-urinary system diseases
+N,Health status and contact with the factors affecting health institutions (machine translation),Other
+N,"Injury, poisoning and certain other consequences of external causes",Other
+N,It originated in some cases the perinatal period (machine translation),Perinatal
+N,Mental and behavioral disorders (machine translation),Mental and behavioural disorders
+Y,Mental and behavioural disorders,F Mental and behavioural disorders
+N,Musculoskeletal system and connective tissue diseases (machine translation),Diseases of the musculoskeletal system and connective tissue
+Y,Neoplasms,C Neoplasms
+N,Nervous system disease (machine translation),Diseases of the nervous system
+N,"Pregnancy, childbirth and postpartum (machine translation)",Perinatal
+N,"Pregnancy, childbirth and the puerperium",Perinatal
+N,Respiratory diseases (machine translation),Diseases of the respiratory system
+N,Skin and subcutaneous tissue disorders (machine translation),Diseases of the skin and subcutaneous tissue
+N,"Some other consequences of injuries, poisoning and external causes (machine translation)",Other
+N,"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified",Other
+N,"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified by (machine translation)",Other
+N,Tumor (machine translation),
