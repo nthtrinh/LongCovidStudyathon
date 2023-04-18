@@ -122,8 +122,8 @@ ui <- fluidPage(
              div(style="display: inline-block;vertical-align:top; width: 150px;",
                  pickerInput(inputId = "incidence_start_date_selector",
                              label = "incidence start date",
-                             choices = as.character(unique(incidence_estimates$incidence_start_date)),
-                             selected = as.character(unique(incidence_estimates$incidence_start_date)),
+                             choices = as.character(sort(unique(incidence_estimates$incidence_start_date))),
+                             selected = as.character(sort(unique(incidence_estimates$incidence_start_date))),
                              options = list(
                                `actions-box` = TRUE,
                                size = 10,
@@ -134,12 +134,12 @@ ui <- fluidPage(
                  pickerInput(inputId = "interval_time_selector",
                              label = "interval time",
                              choices = as.character(unique(incidence_estimates$analysis_interval)),
-                             selected = as.character(unique(incidence_estimates$analysis_interval)),
+                             selected = as.character(unique(incidence_estimates$analysis_interval))[1],
                              options = list(
                                `actions-box` = TRUE,
                                size = 10,
                                `selected-text-format` = "count > 3"),
-                             multiple = TRUE)
+                             multiple = FALSE)
              ),
              tabsetPanel(type = "tabs",
                          tabPanel("Table of estimates", 
