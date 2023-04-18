@@ -6,7 +6,7 @@ server <-	function(input, output, session) {
     table <- lsc_table  %>% 
       filter(database_name %in% input$lsc_db) %>% 
       filter(window_name %in% input$lsc_time_window) %>% 
-      filter(cohort_definition_id %in%  input$lsc_cohort_definition_id)
+      filter(cohort_name %in%  input$lsc_cohort_name)
     # %>% 
     #   filter(name %in%  input$lsc_icd_chapter)
     # 
@@ -18,7 +18,7 @@ server <-	function(input, output, session) {
   output$tbl_lsc <-  renderDataTable({
     
     table <- get_lsc() %>% 
-      select(any_of(c("cohort_definition_id",
+      select(any_of(c("cohort_name",
                       "name" ,
                      "concept",   
                      "proportion",
@@ -35,7 +35,7 @@ server <-	function(input, output, session) {
     
     
     perc_cols<- stringr::str_subset(colnames(table), 
-                                    paste("cohort_definition_id", "concept", sep = "|"),
+                                    paste("cohort_name", "concept", sep = "|"),
                                     negate = TRUE)
     
     datatable(table,
@@ -91,7 +91,7 @@ server <-	function(input, output, session) {
     table <- lsc_table  %>% 
       filter(database_name %in% input$lsc_comp_db) %>% 
       filter(window_name %in% input$lsc_comp_time_window) %>% 
-      select(any_of(c("cohort_definition_id",
+      select(any_of(c("cohort_name",
                       "name" ,
                       "concept",   
                       "proportion",
@@ -99,18 +99,18 @@ server <-	function(input, output, session) {
       distinct() 
     
     table_target <- table %>% 
-      filter(cohort_definition_id %in%  
-               input$lsc_comp_cohort_definition_id_1) %>% 
-      select(!"cohort_definition_id") %>% 
+      filter(cohort_name %in%  
+               input$lsc_comp_cohort_name_1) %>% 
+      select(!"cohort_name") %>% 
       mutate(database_name= paste0(database_name, "_a_target")) %>% 
       pivot_wider(names_from = c(database_name),
                   values_from = c("proportion"
                   ))
     
     table_comparator <- table %>% 
-      filter(cohort_definition_id %in%  
-               input$lsc_comp_cohort_definition_id_2) %>% 
-      select(!"cohort_definition_id") %>% 
+      filter(cohort_name %in%  
+               input$lsc_comp_cohort_name_2) %>% 
+      select(!"cohort_name") %>% 
       mutate(database_name= paste0(database_name, "_b_comparator")) %>% 
       pivot_wider(names_from = c(database_name),
                   values_from = c("proportion"))
@@ -199,7 +199,7 @@ server <-	function(input, output, session) {
     table <- du_table  %>% 
       filter(database_name %in% input$lsd_db) %>% 
       filter(window_name %in% input$lsd_time_window) %>% 
-      filter(cohort_definition_id %in%  input$lsd_cohort_definition_id)
+      filter(cohort_name %in%  input$lsd_cohort_name)
 
     table
   })
@@ -209,7 +209,7 @@ server <-	function(input, output, session) {
   output$tbl_lsd <-  renderDataTable({
     
     table <- get_lsd() %>% 
-      select(any_of(c("cohort_definition_id",
+      select(any_of(c("cohort_name",
                       "name" ,
                       "concept",   
                       "proportion",
@@ -225,7 +225,7 @@ server <-	function(input, output, session) {
                   ))
     
     perc_cols<- stringr::str_subset(colnames(table), 
-                                    paste("cohort_definition_id", "concept", sep = "|"),
+                                    paste("cohort_name", "concept", sep = "|"),
                         negate = TRUE)
     
     datatable(table,

@@ -46,10 +46,10 @@ tabPanel("Health conditions: individual cohorts",
                          multiple = TRUE)
          ),
          div(style="display: inline-block;vertical-align:top; width: 150px;",
-             pickerInput(inputId = "lsc_cohort_definition_id",
-                         label = "cohort_definition_id",
-                         choices = unique(lsc_table$cohort_definition_id),
-                         selected = unique(lsc_table$cohort_definition_id)[1] ,
+             pickerInput(inputId = "lsc_cohort_name",
+                         label = "cohort_name",
+                         choices = unique(lsc_table$cohort_name),
+                         selected = unique(lsc_table$cohort_name)[1] ,
                          options = list(
                            `actions-box` = TRUE,
                            size = 10,
@@ -103,10 +103,10 @@ tabPanel("Health conditions: cohort comparison",
                          multiple = TRUE)
          ),
          div(style="display: inline-block;vertical-align:top; width: 150px;",
-             pickerInput(inputId = "lsc_comp_cohort_definition_id_1",
-                         label = "Target cohort_definition_id",
-                         choices = unique(lsc_table$cohort_definition_id),
-                         selected = unique(lsc_table$cohort_definition_id)[1] ,
+             pickerInput(inputId = "lsc_comp_cohort_name_1",
+                         label = "Target cohort",
+                         choices = unique(lsc_table$cohort_name),
+                         selected = unique(lsc_table$cohort_name)[1] ,
                          options = list(
                            `actions-box` = TRUE,
                            size = 10,
@@ -114,10 +114,10 @@ tabPanel("Health conditions: cohort comparison",
                          multiple = FALSE)
          ),
          div(style="display: inline-block;vertical-align:top; width: 150px;",
-             pickerInput(inputId = "lsc_comp_cohort_definition_id_2",
-                         label = "Comparator cohort_definition_id",
-                         choices = unique(lsc_table$cohort_definition_id),
-                         selected = unique(lsc_table$cohort_definition_id)[1] ,
+             pickerInput(inputId = "lsc_comp_cohort_name_2",
+                         label = "Comparator cohort",
+                         choices = unique(lsc_table$cohort_name),
+                         selected = unique(lsc_table$cohort_name)[1] ,
                          options = list(
                            `actions-box` = TRUE,
                            size = 10,
@@ -148,7 +148,7 @@ tabPanel("Health conditions: cohort comparison",
 
 
 
-## LSC: single cohort ------ 
+## DU: single cohort ------ 
 tabPanel("Drug utilisation: individual cohorts",	
          tags$h3("Large scale characterisation: individual cohorts"),
          div(style="display: inline-block;vertical-align:top; width: 150px;",
@@ -163,10 +163,10 @@ tabPanel("Drug utilisation: individual cohorts",
                          multiple = TRUE)
          ),
          div(style="display: inline-block;vertical-align:top; width: 150px;",
-             pickerInput(inputId = "lsd_cohort_definition_id",
-                         label = "cohort_definition_id",
-                         choices = unique(du_table$cohort_definition_id),
-                         selected = unique(du_table$cohort_definition_id)[1] ,
+             pickerInput(inputId = "lsd_cohort_name",
+                         label = "cohort_name",
+                         choices = unique(du_table$cohort_name),
+                         selected = unique(du_table$cohort_name)[1] ,
                          options = list(
                            `actions-box` = TRUE,
                            size = 10,
@@ -206,6 +206,14 @@ tabPanel("Drug utilisation: individual cohorts",
 ),
 
 
+
+
+
+
+## DU: comparing cohort ------ 
+tabPanel("Drug utilisation: cohort comparison",	
+         tags$h3("Drug utilisation: cohort comparison"),
+),
 ## Health care resource utilisation -----
 "Health care resource utilisation",
 tabPanel("Health care resource utilisation",	
