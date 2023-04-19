@@ -24,8 +24,8 @@ read_cluster_data = function(partner, model){
     magrittr::subtract(1)
   res$demographics = read_csv(str_glue("{path}/Clustering_LCA_model{model}_x.csv"), show_col_types = FALSE)
   
-  if(file.exists(str_glue("{partner}_Results_v2/names_symptoms_{partner}.csv"))){
-    res$names_symptoms = read_csv(str_glue("{partner}_Results_v2/names_symptoms_{partner}.csv"), show_col_types = FALSE, col_names = colnames(names_symptoms)) %>% 
+  if(file.exists(str_glue("data/{partner}_Results_v2/names_symptoms_{partner}.csv"))){
+    res$names_symptoms = read_csv(str_glue("data/{partner}_Results_v2/names_symptoms_{partner}.csv"), show_col_types = FALSE, col_names = colnames(names_symptoms)) %>% 
       slice(-1)
   }
   else{
@@ -35,7 +35,8 @@ read_cluster_data = function(partner, model){
   return(res)
 }
 
-cluster_data = read_cluster_data(partners[3], 4)
+read_cluster_data(partners[1], 4)
+
 
 process_cluster_data = function(cluster_data){
   # Process the cluster probability matrix
@@ -52,6 +53,8 @@ process_cluster_data = function(cluster_data){
     left_join(cluster_data$names_symptoms, by = "cohort_definition_id") %>%
     ungroup() %>% 
     mutate(database_name = cluster_data$partner)  
+  
+  print(cluster_data$names_symptoms)
   
   # Add incidence
   incidence = tibble(
