@@ -80,6 +80,7 @@
   },
   "InclusionRules": [
     {
+      "name": "washout",
       "expression": {
         "Type": "ALL",
         "CriteriaList": [
