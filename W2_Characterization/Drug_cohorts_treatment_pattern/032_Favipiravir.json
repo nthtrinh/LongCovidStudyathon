@@ -2,23 +2,21 @@
   "ConceptSets": [
     {
       "id": 0,
-      "name": "C07 BETA BLOCKING AGENTS",
+      "name": "Favipiravir_JTA",
       "expression": {
         "items": [
           {
             "concept": {
-              "CONCEPT_CLASS_ID": "ATC 2nd",
-              "CONCEPT_CODE": "C07",
-              "CONCEPT_ID": 21601664,
-              "CONCEPT_NAME": "BETA BLOCKING AGENTS",
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "CONCEPT_CODE": "OMOP4873976",
+              "CONCEPT_ID": 32765,
+              "CONCEPT_NAME": "Favipiravir",
               "DOMAIN_ID": "Drug",
               "INVALID_REASON": "V",
               "INVALID_REASON_CAPTION": "Valid",
-              "STANDARD_CONCEPT": "C",
-              "STANDARD_CONCEPT_CAPTION": "Classification",
-              "VOCABULARY_ID": "ATC",
-              "VALID_START_DATE": "1970-01-01",
-              "VALID_END_DATE": "2099-12-31"
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "RxNorm Extension"
             },
             "includeDescendants": true
           }
@@ -114,5 +112,6 @@
     "CollapseType": "ERA",
     "EraPad": 0
   },
-  "CensorWindow": {}
+  "CensorWindow": {},
+  "cdmVersionRange": ">=5.0.0"
 }
