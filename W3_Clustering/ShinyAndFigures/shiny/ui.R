@@ -21,15 +21,13 @@ library(epitools)
 #### UI -----
 ui <- fluidPage(
   theme = shinytheme("spacelab"),
-
+  
   # title ------
   # shown across tabs
   titlePanel("Long Covid and PASC Studyathon"),
-
+  
   # set up: pages along the side -----
   navlistPanel(
-
-
     ## Introduction  -----
     tabPanel(
       "Background",
@@ -43,45 +41,55 @@ ui <- fluidPage(
       tags$h4("Long Covid and PASC Studyathon"),
       tags$hr()
     ),
+    tabPanel(
+      "Databases",
+      tags$h3("Databases"),
+      tags$hr()
+    ),
     
     ## Incidence ------ 
-    tabPanel("LCA clustering",	  
-             tags$h3("LCA Clustering"),
-             tags$h5("Plots are shown below...."),
-             tags$hr(),
-             tags$h5("Database"),
-             div(style="display: inline-block;vertical-align:top; width: 150px;",
-                 pickerInput(inputId = "clustering_database_name_selector",
-                             label = "Database",
-                             choices = unique(cluster_data$database_name),
-                             selected = unique(cluster_data$database_name),
-                             options = list(
-                               `actions-box` = TRUE,
-                               size = 10,
-                               `selected-text-format` = "count > 3"),
-                             multiple = TRUE)
-             ),
-             tags$hr(),
-             tags$h5("Cluster settings"),
-             div(style="display: inline-block;vertical-align:top; width: 150px;",
-                 pickerInput(inputId = "clustering_num_clust_selector",
-                             label = "Number of clusters",
-                             choices = unique(cluster_data$num_clust),
-                             selected = 4,
-                             options = list(
-                               `actions-box` = TRUE,
-                               size = 10,
-                               `selected-text-format` = "count > 3"),
-                             multiple = TRUE)
-             ),
-             tabsetPanel(type = "tabs",
-                         tabPanel("Table of information", 
-                             # output info clusters     DTOutput('tbl_incidence_estimates') %>% withSpinner()
-                             ), 
-                         tabPanel("Plot of clusters",
-                                  tags$hr(),
-                                  plotlyOutput('plot_cluster', height = "800px") %>% withSpinner() )
-             )
+    tabPanel(
+      "LCA clustering",	  
+      tags$h3("LCA Clustering"),
+      tags$h5("Plots are shown below...."),
+      tags$hr(),
+      div(
+        style="display: inline-block;vertical-align:top; width: 150px;",
+        pickerInput(
+          inputId = "clust_cdm_name",
+          label = "Select database",
+          choices = names(dataModel),
+          selected = names(dataModel)[1],
+          options = list(
+            `actions-box` = TRUE,
+            size = 10,
+            `selected-text-format` = "count > 3"),
+          multiple = FALSE)
+      ),
+      tags$hr(),
+      tags$h5("Cluster settings"),
+      div(style="display: inline-block;vertical-align:top; width: 150px;",
+          pickerInput(
+            inputId = "clust_model",
+            label = "Select model",
+            choices = models,
+            selected = models[1],
+            options = list(
+              `actions-box` = TRUE,
+              size = 10,
+              `selected-text-format` = "count > 3"),
+            multiple = FALSE)
+      ),
+      tabsetPanel(
+        type = "tabs",
+        tabPanel(
+          "Characterization", 
+          DTOutput('tbl_characteristics') %>% withSpinner()
+        ), 
+        tabPanel(
+          "Symptoms",
+          plotlyOutput('plot_cluster', height = "800px") %>% withSpinner() )
+      )
     )
   )
 )
