@@ -49,11 +49,11 @@
     "Type": "First"
   },
   "ExpressionLimit": {
-    "Type": "First"
+    "Type": "All"
   },
   "InclusionRules": [
     {
-      "name": "180days washout",
+      "name": "washout",
       "expression": {
         "Type": "ALL",
         "CriteriaList": [
@@ -92,7 +92,7 @@
               },
               "End": {
                 "Days": 1,
-                "Coeff": 1
+                "Coeff": -1
               },
               "UseEventEnd": false
             },
