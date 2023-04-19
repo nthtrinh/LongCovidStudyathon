@@ -4,6 +4,7 @@ library(pheatmap)
 setwd("PATH TO THIS SCRIPT")
 
 ## Data processing ----
+# Paths for database comparison plot
 partners = c("BIGAN", "CORIVA-Estonia", "IMASIS", "CHUM", "CPRDGold", "PHARMETRICS")
 path_template = "data/{partner}_Results_v2/Clustering/"
 
@@ -35,7 +36,7 @@ read_cluster_data = function(partner, model){
   return(res)
 }
 
-read_cluster_data(partners[1], 4)
+# read_cluster_data(partners[1], 4)
 
 
 process_cluster_data = function(cluster_data){
@@ -53,8 +54,6 @@ process_cluster_data = function(cluster_data){
     left_join(cluster_data$names_symptoms, by = "cohort_definition_id") %>%
     ungroup() %>% 
     mutate(database_name = cluster_data$partner)  
-  
-  print(cluster_data$names_symptoms)
   
   # Add incidence
   incidence = tibble(
@@ -102,7 +101,7 @@ process_cluster_data = function(cluster_data){
 plot_data = pmap_df(expand.grid(partners, 4), ~ read_cluster_data(.x, .y) %>% process_cluster_data())
 save(plot_data, file = "plot_data.RData")
 
-## Drawing the plot ----
+## Drawing the partner comparison plot ----
 load("plot_data.RData")
 
 props_wide = plot_data %>% 
@@ -141,78 +140,58 @@ pheatmap(
   ),
   cellwidth = 20,
   cellheight = 12,
-  filename = str_glue("All_partners.pdf")
+  filename = str_glue("plots/All_partners.pdf")
 )
 
+## Drawing the cluster number choice plots ------
+# Paths for cluster number comparison plots
+partners = c("BIGAN", "CORIVA-Estonia", "IMASIS", "CPRDGold", "IPCI")
+path_template = "data/{partner}_Results/Clustering/"
+load("names_symptoms.RData", verbose = T)
+
+cluster_number_plot_data = pmap_df(expand.grid(partners, 2:7), ~ read_cluster_data(.x, .y) %>% process_cluster_data())
+save(cluster_number_plot_data, file = "cluster_number_plot_data.RData")
+
+load("cluster_number_plot_data.RData")
+for(partner in partners){
+  props_wide = cluster_number_plot_data %>% 
+    pivot_wider(id_cols = c("database_name", "num_clust", "cluster_id", "N", "Nprop", "average_age", "proportion_male", "BIC"), names_from = cohort_name, values_from = proportion) %>% 
+    mutate(rowname = str_glue("{database_name}_{num_clust}_{cluster_id}")) 
+  
+  mat = props_wide %>%
+    filter(database_name == partner) %>% 
+    select(-database_name, -num_clust, -cluster_id, -N, -Nprop, -average_age, -proportion_male, -BIC) %>%
+    as.data.frame() %>%
+    column_to_rownames("rowname") %>%
+    as.matrix()
+  
+  row_annotations = props_wide %>% 
+    filter(database_name == partner) %>% 
+    as.data.frame() %>%
+    column_to_rownames("rowname") %>% 
+    select(Nprop, average_age, proportion_male) %>% 
+    filter(!is.na(proportion_male))
+  
+  mat = mat[sort(rownames(row_annotations)), order(colnames(mat))]
+  
+  pheatmap(
+    mat,
+    cluster_rows = F, 
+    cluster_cols = F, 
+    annotation_row = row_annotations,
+    breaks = seq(0, 0.4, length.out = 100), 
+    color = c("white", colorRampPalette(c("#f0f9e8", "#ccebc5", "#4eb3d3", "#08589e"))(98)),
+    gaps_row = which(str_replace(rownames(mat), "_[0-9]+$", "")[1:(nrow(mat) - 1)] != str_replace(rownames(mat), "_[0-9]+$", "")[2:nrow(mat)]),
+    annotation_colors = list(
+      # proportion_male = c("white", "navy"),
+      average_age = c("#DEF5E5B3", "#38AAACB3", "#40498EB3", "#0B0405B3"),
+      proportion_male = c("#F0F921B3", "#ED7953B3", "#9C179EB3", "#0D0887B3"),
+      Nprop = scales::viridis_pal(alpha = 0.7)(4) %>% rev()
+    ),
+    cellwidth = 20,
+    cellheight = 12,
+    filename = str_glue("plots/{partner}_clusters.pdf")
+  )
+}
 
 
-# for(partner in partners){
-#   props_wide = data %>% 
-#     pivot_wider(id_cols = c("database_name", "num_clust", "cluster_id", "N", "average_age", "proportion_male", "BIC"), names_from = cohort_name, values_from = proportion) %>% 
-#     mutate(rowname = str_glue("{database_name}_{num_clust}_{cluster_id}")) 
-#   
-#   mat = props_wide %>%
-#     filter(database_name == partner) %>% 
-#     select(-database_name, -num_clust, -cluster_id, -N, -average_age, -proportion_male, -BIC) %>%
-#     as.data.frame() %>%
-#     column_to_rownames("rowname") %>%
-#     as.matrix()
-#   
-#   row_annotations = props_wide %>% 
-#     filter(database_name == partner) %>% 
-#     as.data.frame() %>%
-#     column_to_rownames("rowname") %>% 
-#     select(N, average_age, proportion_male, BIC) 
-#   
-#   pheatmap(
-#     mat[, order(colnames(mat))], 
-#     cluster_rows = F, 
-#     cluster_cols = F, 
-#     annotation_row = row_annotations,
-#     breaks = seq(0, 0.4, length.out = 99), 
-#     gaps_row = which(str_replace(rownames(mat), "_[0-9]+$", "")[1:(nrow(mat) - 1)] != str_replace(rownames(mat), "_[0-9]+$", "")[2:nrow(mat)]),
-#     annotation_colors = list(
-#       proportion_male = c("white", "navy"),
-#       Nprop = c("white", "black")
-#     ),
-#     cellwidth = 20,
-#     cellheight = 12,
-#     filename = str_glue("~/Desktop/ClusterResults/{partner}_clusters.png")
-#   )
-# }
-# 
-# 
-# 
-# 
-# props_wide = data %>% 
-#   pivot_wider(id_cols = c("database_name", "num_clust", "cluster_id", "N", "average_age", "proportion_male", "BIC"), names_from = cohort_name, values_from = proportion) %>% 
-#   mutate(rowname = str_glue("{database_name}_{num_clust}_{cluster_id}")) 
-# 
-# mat = props_wide %>%
-#   filter(database_name == "CPRDGold") %>% 
-#   select(-database_name, -num_clust, -cluster_id, -N, -average_age, -proportion_male, -BIC) %>%
-#   as.data.frame() %>%
-#   column_to_rownames("rowname") %>%
-#   as.matrix()
-# 
-# row_annotations = props_wide %>% 
-#   filter(database_name == "CPRDGold") %>% 
-#   as.data.frame() %>%
-#   column_to_rownames("rowname") %>% 
-#   select(N, average_age, proportion_male, BIC) 
-# 
-# pheatmap(
-#   mat[, order(colnames(mat))], 
-#   cluster_rows = F, 
-#   cluster_cols = F, 
-#   annotation_row = row_annotations,
-#   breaks = seq(0, 0.4, length.out = 99), 
-#   gaps_row = which(str_replace(rownames(mat), "_[0-9]+$", "")[1:(nrow(mat) - 1)] != str_replace(rownames(mat), "_[0-9]+$", "")[2:nrow(mat)]),
-#   annotation_colors = list(
-#     proportion_male = c("firebrick", "white", "navy"),
-#     BIC = c("white", "black")
-#   ),
-#   cellwidth = 20,
-#   cellheight = 12
-# )
-# 
