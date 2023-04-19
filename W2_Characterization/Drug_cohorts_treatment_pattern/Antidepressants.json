@@ -53,7 +53,7 @@
   },
   "InclusionRules": [
     {
-      "name": "Washout 180days",
+      "name": "Washout",
       "expression": {
         "Type": "ALL",
         "CriteriaList": [
