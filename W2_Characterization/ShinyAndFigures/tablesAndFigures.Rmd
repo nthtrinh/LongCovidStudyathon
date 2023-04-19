@@ -1,0 +1,83 @@
+---
+title: "Long COVID Studyathon"
+subtitle: "W2: Characterization"
+output: html_document
+date: "April, 2023"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+This document contains useful tables and figures for the manuscripts on characterization and drug utilization of long COVID.
+
+```{r loadDataAndLibraries, include=FALSE}
+library(ggplot2)
+du_table  <- read.csv(here::here("data", "du_table.csv"))
+lsc_hu    <- read.csv(here::here("data", "lsc_hu.csv"))
+lsc_vacc  <- read.csv(here::here("data", "lsc_vacc.csv"))
+lsc_table <- read.csv(here::here("data", "lsc_table.csv"))
+```
+
+
+## Table one
+Health conditions at CPRD Gold
+
+```{r tableOne, include=FALSE}
+# COMBINAR NOM I COUNTS I DP FER PIVOT WIDER!!
+tableOne_conditions <- lsc_table %>%
+  dplyr::filter(table_name == "condition_occurrence") %>%
+  dplyr::filter(concept_id != 0 & concept_id != 38003614) %>%
+  dplyr::filter(cohort_name %in% c("Infection", "Reinfection", "Test negative", "Influenza")) %>% # base cohorts
+  dplyr::filter(window_name == "Any;-366") %>% #"Any;-1"
+  dplyr::group_by(database_name, cohort_name) %>%
+  dplyr::arrange(desc(.data$proportion)) %>%
+  dplyr::mutate(target_id = dplyr::row_number(),
+                cohort_name = factor(cohort_name, levels = c("Infection", "Reinfection", "Test negative", "Influenza"))) %>%
+  dplyr::ungroup() %>%
+  dplyr::filter(target_id <=5) %>%
+  dplyr::mutate(fillingContent = paste(concept_name, ', N = ', concept_count, ' (', round(proportion*100,2), ')', sep = "")) %>%
+  dplyr::select(database_name, cohort_name, target_id, fillingContent) %>%
+  tidyr::pivot_wider(names_from = database_name, 
+                  values_from = fillingContent) %>%
+  dplyr::group_by(target_id) %>%
+  dplyr::arrange(cohort_name, .by_group = TRUE) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(target_id = factor(target_id, 
+                                   levels = c(1,2,3,4,5), 
+                                   labels = c("Most frequent", "#2","#3","#4","#5")))
+
+tableOne_drugs <- du_table %>%
+  dplyr::filter(table_name == "drug_exposure") %>%
+  dplyr::filter(concept_id != 0 & concept_id != 38003614) %>%
+  dplyr::filter(cohort_name %in% c("Infection", "Reinfection", "Test negative", "Influenza")) %>% # base cohorts
+  dplyr::filter(window_name == "-365;-181") %>% #"-365;-1"
+  dplyr::group_by(database_name, cohort_name) %>%
+  dplyr::arrange(desc(.data$proportion)) %>%
+  dplyr::mutate(target_id = dplyr::row_number(),
+                cohort_name = factor(cohort_name, levels = c("Infection", "Reinfection", "Test negative", "Influenza"))) %>%
+  dplyr::ungroup() %>%
+  dplyr::filter(target_id <=5) %>%
+  dplyr::mutate(fillingContent = paste(concept_name, ', N = ', concept_count, ' (', round(proportion*100,2), '%)', sep = "")) %>%
+  dplyr::select(target_id, database_name, cohort_name, fillingContent) %>%
+  tidyr::pivot_wider(names_from = database_name, 
+                  values_from = fillingContent) %>%
+  dplyr::group_by(target_id) %>%
+  dplyr::arrange(cohort_name, .by_group = TRUE) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(target_id = factor(target_id, 
+                                   levels = c(1,2,3,4,5), 
+                                   labels = c("Most frequent", "#2","#3","#4","#5")))
+
+tableOne_conditions %>% 
+  dplyr::mutate(table = "Conditions") %>%
+  dplyr::union_all(tableOne_drugs %>%
+                     dplyr::mutate(table = "Drugs")) %>%
+  gt::gt(rowname_col = "cohort_name", groupname_col = c("table", "target_id"))
+
+```
+
+```{r pressure, echo=FALSE}
+
+  
