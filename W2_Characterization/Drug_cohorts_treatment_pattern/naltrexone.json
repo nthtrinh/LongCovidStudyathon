@@ -61,7 +61,9 @@
         "CriteriaList": [
           {
             "Criteria": {
-              "DoseEra": {}
+              "DoseEra": {
+                "CodesetId": 1
+              }
             },
             "StartWindow": {
               "Start": {
@@ -81,7 +83,9 @@
           },
           {
             "Criteria": {
-              "DrugEra": {}
+              "DrugEra": {
+                "CodesetId": 1
+              }
             },
             "StartWindow": {
               "Start": {
