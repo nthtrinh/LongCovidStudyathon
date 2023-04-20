@@ -21,6 +21,26 @@ server <- function(input, output, session) {
       filter(denominator_name %in% input$incidence_denominator_name_selector) %>%
       filter(analysis_interval %in% input$interval_time_selector)
     
+    # Sort selected age groups
+    denom_age_grp_selector <- input$incidence_denominator_age_group_selector
+    age_upper_bd <- sapply(
+      denom_age_grp_selector, 
+      function (age_range) {
+        stringr::str_split(age_range, ';', simplify = TRUE)[2]
+      }
+    )
+    denom_age_grp_selector <- 
+      denom_age_grp_selector[order(as.integer(age_upper_bd))]
+    
+    # Relevel age groups for proper ordering when used as an x-axis
+    table <- table %>%
+      filter(denominator_age_group %in% denom_age_grp_selector) %>%
+      mutate(denominator_age_group = factor(denominator_age_group)) %>% 
+      mutate(denominator_age_group = 
+        forcats::fct_relevel(denominator_age_group, 
+                             denom_age_grp_selector)
+      )
+    
     table
   }) 
   
