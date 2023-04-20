@@ -27,13 +27,17 @@ Anneli Uusküla 3
 
 Daniel Dedman 4
 
-1 - Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences. University of Oxford.
+Miguel A. Mayer 5
+
+1 - Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences. University of Oxford
 
 2 - Institute of Computer Science, University of Tartu, Tartu, Estonia
 
 3 - Department of Family Medicine and Public Health, University of Tartu, Tartu, Estonia
 
-4 - CPRD, Medicines and Healthcare products Regulatory Agency, London, UK.
+4 - CPRD, Medicines and Healthcare products Regulatory Agency, London, UK
+
+5 - Parc de Salut Mar, Hospital del Mar Medical Research Institute, Barcelona, Spain 
 
 
 
