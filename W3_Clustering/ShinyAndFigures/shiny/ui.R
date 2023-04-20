@@ -90,6 +90,46 @@ ui <- fluidPage(
           "Symptoms",
           plotlyOutput('plot_cluster', height = "800px") %>% withSpinner() )
       )
+    ),
+    tabPanel(
+      "LCA clustering all countries",	  
+      tags$h3("LCA Clustering"),
+      tags$h5("Plots are shown below...."),
+      tags$hr(),
+      tags$h5("Cluster settings"),
+      div(style="display: inline-block;vertical-align:top; width: 150px;",
+          pickerInput(
+            inputId = "clust_model_all_countries",
+            label = "Select model",
+            choices = models,
+            selected = models[1],
+            options = list(
+              `actions-box` = TRUE,
+              size = 10,
+              `selected-text-format` = "count > 3"),
+            multiple = FALSE)
+      ),
+      plotOutput('plot_cluster_all_countries', height = "800px") %>% withSpinner()
+    ),
+    tabPanel(
+      "LCA clustering all models",	  
+      tags$h3("LCA Clustering"),
+      tags$h5("Plots are shown below...."),
+      tags$hr(),
+      tags$h5("Cluster settings"),
+      div(style="display: inline-block;vertical-align:top; width: 150px;",
+          pickerInput(
+            inputId = "clust_db_all",
+            label = "Select country",
+            choices = unlist(db),
+            selected = unlist(db)[1],
+            options = list(
+              `actions-box` = TRUE,
+              size = 10,
+              `selected-text-format` = "count > 3"),
+            multiple = FALSE)
+      ),
+      plotOutput('plot_cluster_all_models', height = "800px") %>% withSpinner()
     )
   )
 )
