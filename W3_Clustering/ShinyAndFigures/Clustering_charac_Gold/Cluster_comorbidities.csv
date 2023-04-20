@@ -1,0 +1,5 @@
+"cluster_assignment","autoimmune_disease_sum","asthma_sum","malignant_neoplastic_disease_sum","diabetes_mellitus_sum","heart_disease_sum","hypertensive_disorder_sum","renal_impairment_sum","copd_sum","dementia_sum"
+1:4,288,1176,804,999,1377,2116,777,757,194
+1:4,132,1444,94,257,214,348,68,18,18
+1:4,75,474,179,286,260,540,134,63,22
+1:4,66,593,72,165,116,240,48,39,7
