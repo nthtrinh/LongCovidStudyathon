@@ -2,8 +2,9 @@
 
 ### Please add all of your affiliations you want to have listed for the manuscripts
 
-### CPRD GOLD
-Ethics: xxxxxx
+### Ethics approval
+The study was approved by the relevant Institutional Review Boards: 
+- CPRD’s Research Data Governance Process (Protocol 23_002603)
 
 ## Participants
 
