@@ -13,7 +13,7 @@ Kim Lopez Guell 1
 
 Annika Jodicke 1
 
-Junquing Xie 1
+Junqing Xie 1
 
 Edward Burn 1
 
