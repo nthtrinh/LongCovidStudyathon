@@ -1,0 +1,58 @@
+{
+  "ConceptSets": [
+    {
+      "id": 0,
+      "name": "Nerve block",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_CLASS_ID": "Procedure",
+              "CONCEPT_CODE": "56333001",
+              "CONCEPT_ID": 4210480,
+              "CONCEPT_NAME": "Nerve block",
+              "DOMAIN_ID": "Procedure",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "VOCABULARY_ID": "SNOMED",
+              "VALID_START_DATE": "1970-01-01",
+              "VALID_END_DATE": "2099-12-31"
+            },
+            "includeDescendants": true
+          }
+        ]
+      }
+    }
+  ],
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {
+        "ProcedureOccurrence": {
+          "CodesetId": 0
+        }
+      }
+    ],
+    "ObservationWindow": {
+      "PriorDays": 0,
+      "PostDays": 0
+    },
+    "PrimaryCriteriaLimit": {
+      "Type": "All"
+    }
+  },
+  "QualifiedLimit": {
+    "Type": "First"
+  },
+  "ExpressionLimit": {
+    "Type": "All"
+  },
+  "InclusionRules": [],
+  "CensoringCriteria": [],
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {}
+}
