@@ -5,6 +5,7 @@
 ### Ethics approval
 The study was approved by the relevant Institutional Review Boards: 
 - CPRD’s Research Data Governance Process (Protocol 23_002603)
+- The Research Ethics Committee of the University of Tartu approval (Protocol No. 330/T10)
 
 ## Participants
 
@@ -20,6 +21,16 @@ Edward Burn 1
 
 Theresa Burkard 1
 
+Raivo Kolde 2
+
+Anneli Uusküla 3
+
 1- Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences. University of Oxford.
+
+2 - Institute of Computer Science, University of Tartu, Tartu, Estonia
+
+3 - Department of Family Medicine and Public Health, University of Tartu, Tartu, Estonia
+
+
 
 
