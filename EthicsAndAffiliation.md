@@ -25,11 +25,15 @@ Raivo Kolde 2
 
 Anneli Uusküla 3
 
-1- Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences. University of Oxford.
+Daniel Dedman 4
+
+1 - Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences. University of Oxford.
 
 2 - Institute of Computer Science, University of Tartu, Tartu, Estonia
 
 3 - Department of Family Medicine and Public Health, University of Tartu, Tartu, Estonia
+
+4 - 
 
 
 
