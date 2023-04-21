@@ -6,6 +6,7 @@
 The study was approved by the relevant Institutional Review Boards: 
 - CPRD’s Research Data Governance Process (Protocol 23_002603)
 - The Research Ethics Committee of the University of Tartu approval (Protocol No. 330/T10)
+- The Integrated Primary Care Information (IPCI) Governanace Board (Protocol No. 9/2023)
 
 ## Participants
 
