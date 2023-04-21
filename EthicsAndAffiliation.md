@@ -29,6 +29,8 @@ Daniel Dedman 4
 
 Miguel A. Mayer 5
 
+Johnmary T. Arinze 6
+
 1 - Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences. University of Oxford
 
 2 - Institute of Computer Science, University of Tartu, Tartu, Estonia
@@ -38,6 +40,8 @@ Miguel A. Mayer 5
 4 - CPRD, Medicines and Healthcare products Regulatory Agency, London, UK
 
 5 - Parc de Salut Mar, Hospital del Mar Medical Research Institute, Barcelona, Spain 
+
+6 - Department of Medical Informatics, Erasmus University Medical Center, Rotterdam, Netherlands
 
 
 
