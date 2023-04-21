@@ -32,7 +32,9 @@ Miguel A. Mayer 5
 
 Johnmary T. Arinze 6
 
-Kristin Kostka 1, 7
+Nhung TH Trinh 7
+
+Hedvig ME Nordeng 7,8
 
 1 - Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences. University of Oxford
 
@@ -46,7 +48,10 @@ Kristin Kostka 1, 7
 
 6 - Department of Medical Informatics, Erasmus University Medical Center, Rotterdam, Netherlands
 
-7 - The OHDSI Center at the Roux Institute, Northeastern University, Portland, ME, USA
+7 - Pharmacoepidemiology and Drug Safety Research Group, Department of Pharmacy, Faculty of Mathematics and Natural Sciences, University of Oslo, Oslo, Norway
+
+8 - Department of Child Health and Development, Norwegian Institute of Public Health, Oslo, Norway
+
 
 
 
