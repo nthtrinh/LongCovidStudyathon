@@ -32,6 +32,8 @@ Miguel A. Mayer 5
 
 Johnmary T. Arinze 6
 
+Kristin Kostka 1, 7
+
 1 - Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences. University of Oxford
 
 2 - Institute of Computer Science, University of Tartu, Tartu, Estonia
@@ -43,6 +45,8 @@ Johnmary T. Arinze 6
 5 - Parc de Salut Mar, Hospital del Mar Medical Research Institute, Barcelona, Spain 
 
 6 - Department of Medical Informatics, Erasmus University Medical Center, Rotterdam, Netherlands
+
+7 - The OHDSI Center at the Roux Institute, Northeastern University, Portland, ME, USA
 
 
 
